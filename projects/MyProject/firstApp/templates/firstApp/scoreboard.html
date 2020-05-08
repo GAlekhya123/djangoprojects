@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Score Board</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}" type="text/css">
+</head>
+<body>
+	<div class="container">
+		<form action="{% url 'score' %}" method="POST">
+			{% csrf_token %}
+			<h1 id="id1">Score Board</h1>
+				{% if t1val is None %}
+			<div class="parent">
+				<div class="child">
+					<h2 id="id2">Team 1</h2>
+					<input type="text" name="t1val" value="0" readonly>
+				{% else %}
+					<input type="text" name="t1val" value="{{ t1val }}" readonly>
+				{% endif %}
+					<br>
+					<input class="btn btn-primary" type="submit" name="team1"></input>
+				</div>
+
+				{% if t2val is None %}
+				<div class="child">
+					<h2 id="id2">Team 2</h2>
+					<input type="text" name="t2val" value="0" readonly>
+				{% else %}
+					<input type="text" name="t2val" value="{{ t2val }}" readonly>
+				{% endif %}
+					<br>
+					<input class="btn btn-primary" type="submit" name="team2"></input>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

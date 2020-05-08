@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Application</title>
+</head>
+<body>
+	<form method = 'POST'>
+		{% csrf_token %}
+		<div class="container">
+			biryani : <input type='int' name ='biryani'><br>
+			butternaans : <input type= 'int' name = 'butternaans'><br>
+
+		</div>
+		<button type = 'submit'>Submit</button>
+</body>
+</html>

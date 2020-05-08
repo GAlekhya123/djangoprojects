@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RESTAURANT APPLICATION</title>
+</head>
+<body>
+	<table border="3">
+		<tr>
+		<th>Items</th>
+		<th>No. of parcel</th>
+		<th>Cost</th>
+
+
+	</tr>
+	<tr>
+		<td>Biryani</td>
+		<td>{{ menu.biryani }}</td>
+			<td>{{menu.biryani_cost}}</td>
+		
+	</tr>
+	<tr>
+		<td>Butternaans</td>
+		<td>{{ menu.butternaans }}</td>
+		<td>{{menu.butternaans_cost}}</td>
+	</tr>
+	</table>
+	<h2>Total Bill is {{ menu.total }} </h2>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup page</title>
+</head>
+<body>
+	<form action="{% url 'userdetails' %}" method="POST">
+		{% csrf_token %}
+		Name:<input type="text" name="username" required><br>
+		Mobile Number<input type="text" name="mobilenum" required><br>
+		Email:<input type="email" name="email" required><br>
+		<button type="submit">Register</button>
+	</form>
+</body>
+</html>

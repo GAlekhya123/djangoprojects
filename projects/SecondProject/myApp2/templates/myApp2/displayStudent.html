@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Students Data</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,inital-scale=1">
+	{% load static %}
+	<title>Meassage page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="card">
+				<div class="card-header">
+					student details
+				</div>
+				<div class="card-body">
+
+			    <table class="table table-striped table-responsive">
+					<thead >
+						<th>Student Name</th>
+						<th>Student Id</th>
+			            <th>Branch</th>
+			            <th>Age</th>
+			            <th>Known language</th>
+
+					</thead>
+					<tbody>
+						{% for info in data %}
+							<tr>
+								<td>{{info.stuName}}</td>
+								<td>{{info.stuid}}</td>
+			                    <td>{{info.branch}}</td>
+			                    <td>{{info.age}}</td>
+			                    <td>{{info.language}}</td>
+			                    <td><a class="btn btn-primary" href="{% url 'delete' info.id %}">Delete</a></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

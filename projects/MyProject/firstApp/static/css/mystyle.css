@@ -1,0 +1,25 @@
+#id1{
+    text-align:center;
+    margin-top: 50px;
+}
+#id2{
+    color:#6b0505;
+}
+
+.parent{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	}
+
+.child{
+	width: 25%;
+	border: 1px solid #ddd;
+	padding: 1%;
+	margin: 1%;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	height: 150px;
+}

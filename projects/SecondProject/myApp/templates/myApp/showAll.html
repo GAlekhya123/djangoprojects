@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Details</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<th>Emp Id</th>
+			<th>Emp Name</th>
+		</thead>
+		<tbody>
+			{% for info in data %}
+				<tr>
+					<td>{{info.empid}}</td>
+					<td>{{info.empName}}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
